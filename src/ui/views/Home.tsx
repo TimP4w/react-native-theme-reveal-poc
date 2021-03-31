@@ -4,22 +4,12 @@ import {
   StyleSheet,
   Text,
 } from 'react-native';
-import Button from '../components/elements/Button';
+import ThemeSwitch from '../components/ThemeSwitch';
 import { ThemeContext } from '../providers/ThemeProvider';
-import { THEMES } from '../styles/themes';
 
 
 const Home: FunctionComponent<unknown> = ({}) => {
   const COLORS = useContext(ThemeContext).colors;
-  const theme = useContext(ThemeContext);
-
-  const toggleTheme = () => {
-    if (COLORS.THEME === THEMES.DARK) {
-      theme.setTheme(THEMES.LIGHT);
-    } else {
-      theme.setTheme(THEMES.DARK);
-    }
-  }
 
   return (
     <SafeAreaView
@@ -27,7 +17,7 @@ const Home: FunctionComponent<unknown> = ({}) => {
         <Text style={[styles.textStyle, {color: COLORS.text}]}>
           Test theme switch animation :)
         </Text>
-        <Button label={'Toggle Theme'} onPressIn={toggleTheme} />
+        <ThemeSwitch style={styles.themeSwitch}/>
     </SafeAreaView>
   );
 };
@@ -43,6 +33,9 @@ const styles = StyleSheet.create({
   textStyle: {
     marginBottom: 50,
   },
+  themeSwitch: {
+    width: 150,
+  }
 });
 
 export default Home;
