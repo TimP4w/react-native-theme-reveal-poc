@@ -17,7 +17,7 @@ const Home: FunctionComponent<unknown> = ({}) => {
         <Text style={[styles.textStyle, {color: COLORS.text}]}>
           Test theme switch animation :)
         </Text>
-        <ThemeSwitch style={styles.themeSwitch}/>
+        <ThemeSwitch style={styles.themeSwitch} options={{offsetX: 40, offsetY: 40}}/>
     </SafeAreaView>
   );
 };
