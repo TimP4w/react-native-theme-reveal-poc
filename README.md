@@ -1,6 +1,7 @@
 # Theme Reveal in React Native (Proof of Concept)
 
 ![GIF with example](docs/gifs/themeSwitch.gif)
+![GIF with example circle](docs/gifs/themeSwitchCircle.gif)
 
 ## Description
 A simple way to create a reveal effect on switching theme (similar to Telegram) using purely React Native and pre-existing libraries working on both Android and iOS.
